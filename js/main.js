@@ -73,9 +73,11 @@ function myZodiac() {
 	// altered from myZodiac() above
 	// var text = "";
 	// var i; 
+	console.log("users value lowercase is: "
 	
 for (i = 0; i < userInput.length; i + 1) {
-	text += userInput.elements[i].value + "<br>";
+	// removed from original myZodiac()
+	// text += userInput.elements[i].value + "<br>";
 	}
 	document.getElementById("results").innerHTML = text;
 	console.log("userInput");
