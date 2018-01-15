@@ -63,16 +63,20 @@ var zodiac = [
 	sign: "img/cancer.jpg",
 	traits: "the sensitive carb loves to love others",
 }
-]
+];
+
+// can also attempt code for enter key also
+
 
 function myZodiac {
 	var userInput = document.getElementById("astrology");
 	var text = "";
 	var i; 
 	
-for (i = 0; i < userInput.length; i++) {
+for (i = 0; i < userInput.length; i + 1) {
 	text += userInput.elements[i].value + "<br>";
 	}
 	document.getElementById("results").innerHTML = text;
+	console.log("userInput");
 }
 
