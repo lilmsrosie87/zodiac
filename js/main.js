@@ -68,10 +68,11 @@ var zodiac = [
 // can also attempt code for enter key also
 
 
-function myZodiac {
+function myZodiac() {
 	var userInput = document.getElementById("astrology");
-	var text = "";
-	var i; 
+	// altered from myZodiac() above
+	// var text = "";
+	// var i; 
 	
 for (i = 0; i < userInput.length; i + 1) {
 	text += userInput.elements[i].value + "<br>";
