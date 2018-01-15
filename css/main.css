@@ -2,7 +2,20 @@
 	background-color: #00001a;
 }
 
+#bem-aqui {
+	margin: auto;
+	padding: 0px;
+}
+
+#heading {
+	margin: auto;
+	padding: 100px;
+}
+
+
+
 #submit {
+	margin: auto;
 	color: grey;
 }
 
