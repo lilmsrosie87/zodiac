@@ -12,7 +12,7 @@
 // }
 
 // zodiac array below
-var zodiac = [
+var zodiacMofo = [
 {
 	zodiac: "Aries",
 	sign: "img/Aries.jpg",
@@ -73,13 +73,30 @@ function myZodiac() {
 	// altered from myZodiac() above
 	// var text = "";
 	// var i; 
-	console.log("users value lowercase is: "
-	
-for (i = 0; i < userInput.length; i + 1) {
+	console.log(astrology);
+	console.log("users value lowercase is: " + astrology.value);
+		
+		
+// for loop to look through zodiac array
+for(i = 0; i < userInput.length; i + 1) {
 	// removed from original myZodiac()
 	// text += userInput.elements[i].value + "<br>";
-	}
-	document.getElementById("results").innerHTML = text;
-	console.log("userInput");
+	
+	console.log("users value lowercase is: " + userInput.value.toLowerCase());
+	console.log("current zodiac sign in loop is: " + zodiacMofo[i].zodiac) {
+	
+// if statement lowercase
+	if(userInput.value.toLowerCase() === zodiacMofo[i].zodiac {
+		console.log("if statement ran");
+		
+		console.log("users typed in: " + userInput.value);
+		console.log("current image value is: " + zodiacMofo[i].sign);
+		console.log("current fortune value is: " + zodiacMofo[i].traits);
+
+
+document.getElementById("bem-aqui").textContent = "Not one of the of the signs. Please try again";		
+document.getElementById("pic").textContent = " ";
+document.getElementById("horoscope").src = "";
+
 }
 
