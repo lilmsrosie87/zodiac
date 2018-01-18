@@ -65,15 +65,18 @@ var zodiacMofo = [
 }
 ];
 
+// realized you named the array and a property of the array the same name "zodiac". Must go through code to make sure names are in proper area. Changed array name to zodiacMofo
+
 // can also attempt code for enter key also
 
-
 function myZodiac() {
-	var userInput = document.getElementById("astrology");
+	// originally called #astrology, but example showed the id for input tag placed. Will try
+	var userInput = document.getElementById("type");
 	// altered from myZodiac() above
 	// var text = "";
 	// var i; 
-	console.log(astrology);
+	// originally #astrology as console.log parameter
+	console.log(userInput);
 	console.log("users value lowercase is: " + astrology.value);
 		
 		
