@@ -75,18 +75,18 @@ function myZodiac() {
 	// altered from myZodiac() above
 	// var text = "";
 	// var i; 
-	// originally #astrology as console.log parameter
+	// originally #astrology as console.log parameter 
 	console.log(userInput);
-	console.log("users value lowercase is: " + astrology.value);
+	console.log("users value lowercase is: " + userInput.value);
 		
 		
 // for loop to look through zodiac array
-for(i = 0; i < userInput.length; i + 1) {
+for(i = 0; i < zodiacMofo.length; i + 1) {
 	// removed from original myZodiac()
 	// text += userInput.elements[i].value + "<br>";
 	
 	console.log("users value lowercase is: " + userInput.value.toLowerCase());
-	console.log("current zodiac sign in loop is: " + zodiacMofo[i].zodiac) {
+	console.log("current zodiac sign in loop is: " + zodiacMofo[i].zodiac);
 	
 // if statement lowercase
 	if(userInput.value.toLowerCase() === zodiacMofo[i].zodiac {
