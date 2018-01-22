@@ -1,105 +1,117 @@
-// moved the function below zodiac array to see if this will work better
-
-// function myZodiac {
-	// var userInput = document.getElementById("astrology");
-	// var text = "";
-	// var i; 
-	
-// for (i = 0; i < userInput.length; i++) {
-	// text += userInput.elements[i].value + "<br>";
-	// }
-	// document.getElementById("results").innerHTML = text;
-// }
-
-// zodiac array below
+// array of objects to store zodiac data
 var zodiacMofo = [
-{
-	zodiac: "Aries",
-	sign: "img/Aries.jpg",
-	traits: "warrior, strong willied, caring, the bold ram is ready to take on any challenge",
-},
-{
-	zodiac: "Capricorn",
-	sign: "img/Capricorn.jpg",
-	traits: "the ambitous goat is alway on top",
-},
-{
-	zodiac: "Pisces",
-	sign: "img/pisces.jpg",
-	traits: "the dreamy fish flow with the currents",
-},
-{
-	zodiac: "Leo",
-	sign: "img/leo.jpg",
-	traits: "the generous lion lives to express itself",
-},
-{
-	zodiac: "Saggitarius",
-	sign: "img/saggitarius",
-	traits: "the far seeing archer is always expanding",
-},
-{
-	zodiac: "Taurus",
-	sign: "img/taurus.jpg",
-	traits: "the determined bull knows that slow and steay wins the race",
-},
-{
-	zodiac: "Virgo",
-	sign: "img/virgo.jpg",
-	traits: "the discerning virgin strives for perfection",
-},
-{
-	zodiac: "Gemini",
-	sign: "img/gemini.jpg",
-	traits: "the quick thinking twins shake things ups",
-},
-{
-	zodiac: "Libra",
-	sign: "img/libra.jpg",
-	traits: "the worldy water barrier marches to its own beat",
-},
-{
-	zodiac: "Cancer",
-	sign: "img/cancer.jpg",
-	traits: "the sensitive carb loves to love others",
-}
+	{
+		sign: "aquarius",
+		fortune: "Knowledge, Humanitarian, Serious, Insightful, Duplicitous",
+		image: "img/aquarius.jpg",
+	},
+	{
+		sign: "Aries",
+		fortune: "Active, Demanding, Determined, Effective, Ambitious",
+		image: "img/aries.jpg"
+	},
+	{
+		sign: "Cancer",
+		fortune: "Emotion, Diplomatic, Intensity, Impulsive, Selective",
+		image: "img/cancer.jpg"
+	},
+	{
+		sign: "Capricorn",
+		fortune: "Determination, Dominance, Perservering, Practical, Willful",
+		image: "img/capricorn.jpg"
+	},
+	{
+		sign: "Gemini",
+		fortune: "Communication, Indecision, Inquisitive, Intelligent, Changeable",
+		image: "img/gemini.jpg"
+	},
+	{
+		sign: "Leo",
+		fortune: "Ruling, Warmth, Generosity, Faithful, Initiative",
+		image: "img/leo.jpg"
+	},
+	{
+		sign: "Libra",
+		fortune: "Balance, Justice, Truth, Beauty, Perfection",
+		image: "img/libra.jpg"
+	},
+	{
+		sign: "Pisces",
+		fortune: "Fluctuation, Depth, Imagination, Reactive, Indecisive",
+		image: "img/pisces.jpg"
+	},
+	{
+		sign: "Sagittarius",
+		fortune: "Philosophical, Motion, Experimentation, Optimism",
+		image: "img/sagittarius.jpg"
+	},
+	{
+		sign: "Scorpio",
+		fortune: "Transient, Self-Willed, Purposeful, Unyielding",
+		image: "images/scorpio.jpg"
+	},
+	{
+		sign: "Taurus",
+		fortune: "	Security, Subtle strength, Appreciation, Instruction, Patience",
+		image: "img/taurus.jpg"
+	},
+	{
+		sign: "Virgo",
+		fortune: "Analyzing, Practical, Reflective, Observation, Thoughtful",
+		image: "img/virgo.jpg"
+	}
 ];
+// This is code so the enter key also fires (runs/invokes/instantiates) the function
+var btn = document.getElementById('userdata');
+btn.addEventListener('keypress', function enterKey(e) {
+	if(e.keyCode == 13) {
+		horoscope();
+	};
+}, false);
 
-// realized you named the array and a property of the array the same name "zodiac". Must go through code to make sure names are in proper area. Changed array name to zodiacMofo
+// function to determine user horoscope, function fires on user clicking button line 24 index.html
+function horoscope() {
+	// store the tag with id="sign" in var userdata
+	var userdata = document.getElementById("userdata");
 
-// can also attempt code for enter key also
+	// confirm the element exists and what value the user submits
+	console.log(userdata);
+	console.log("users value is: " + userdata.value);
 
-function myZodiac() {
-	// originally called #astrology, but example showed the id for input tag placed. Will try
-	var userInput = document.getElementById("type");
-	// altered from myZodiac() above
-	// var text = "";
-	// var i; 
-	// originally #astrology as console.log parameter 
-	console.log(userInput);
-	console.log("users value lowercase is: " + userInput.value);
-		
-		
-// for loop to look through zodiac array
-for(i = 0; i < zodiacMofo.length; i + 1) {
-	// removed from original myZodiac()
-	// text += userInput.elements[i].value + "<br>";
-	
-	console.log("users value lowercase is: " + userInput.value.toLowerCase());
-	console.log("current zodiac sign in loop is: " + zodiacMofo[i].zodiac);
-	
-// if statement lowercase
-	if(userInput.value.toLowerCase() === zodiacMofo[i].zodiac {
-		console.log("if statement ran");
-		
-		console.log("users typed in: " + userInput.value);
-		console.log("current image value is: " + zodiacMofo[i].sign);
-		console.log("current fortune value is: " + zodiacMofo[i].traits);
+	// loop through zodiac array one item at a time
+	for(var i = 0; i < zodiacMofo.length; i = i + 1) {
+		// check what the users value is before using it in a condition
+		console.log("users value lowercase is: " + userdata.value.toLowerCase());
+		// check the current item's sign in the zodiac array
+		console.log("current zodiac sign in loop is: " + zodiacMofo[i].sign);
 
+		// if the value the user typed in, changed to all lowercase letters, is equal to one of our signs, then we do something
+		if(userdata.value.toLowerCase() === zodiacMofo[i].sign) {
+			// confirm the if statement ran
+			console.log("if statement ran");
 
-document.getElementById("bem-aqui").textContent = "Not one of the of the signs. Please try again";		
-document.getElementById("pic").textContent = " ";
-document.getElementById("horoscope").src = "";
+			// check some values in the console before updating HTML
+			console.log("users typed in: " + userdata.value);
+			console.log("current image value is: " + zodiacMofo[i].image);
+			console.log("current fortune value is: " + zodiacMofo[i].fortune);
 
-}
+			// get element with id="userSign" and change the text to the user input
+			document.getElementById("yourSign").textContent = userdata.value;
+			// get element with id="icon" and change source attribute to current zodiac image path
+			document.getElementById("pic").src = zodiacMofo[i].image;
+			// // get element with id="yourHoroscope" and change the content to this concatenated string
+			document.getElementById("yourHoroscope").textContent = "Your best attributes are: " + zodiac[i].fortune;
 
+			// stop the function because we found a match and added the data to the screen!!!
+			return;
+		};
+
+		// confirm no matches are found if that's the case
+		console.log("no matches were found, user failed to type in a correct zodiac sign");
+
+		// if no match is found, do opposite of above, mostly clearing content and images
+		document.getElementById("yourSign").textContent = "Not one of the signs. Try again!";
+		document.getElementById("yourHoroscope").textContent = "";
+		document.getElementById("pic").src = "";
+	};
+};
