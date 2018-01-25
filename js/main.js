@@ -6,64 +6,64 @@ var zodiacMofo = [
 		image: "img/aquarius.jpg",
 	},
 	{
-		sign: "Aries",
+		sign: "aries",
 		fortune: "Active, Demanding, Determined, Effective, Ambitious",
 		image: "img/aries.jpg"
 	},
 	{
-		sign: "Cancer",
+		sign: "cancer",
 		fortune: "Emotion, Diplomatic, Intensity, Impulsive, Selective",
 		image: "img/cancer.jpg"
 	},
 	{
-		sign: "Capricorn",
+		sign: "capricorn",
 		fortune: "Determination, Dominance, Perservering, Practical, Willful",
 		image: "img/capricorn.jpg"
 	},
 	{
-		sign: "Gemini",
+		sign: "gemini",
 		fortune: "Communication, Indecision, Inquisitive, Intelligent, Changeable",
 		image: "img/gemini.jpg"
 	},
 	{
-		sign: "Leo",
+		sign: "leo",
 		fortune: "Ruling, Warmth, Generosity, Faithful, Initiative",
 		image: "img/leo.jpg"
 	},
 	{
-		sign: "Libra",
+		sign: "libra",
 		fortune: "Balance, Justice, Truth, Beauty, Perfection",
 		image: "img/libra.jpg"
 	},
 	{
-		sign: "Pisces",
+		sign: "pisces",
 		fortune: "Fluctuation, Depth, Imagination, Reactive, Indecisive",
 		image: "img/pisces.jpg"
 	},
 	{
-		sign: "Sagittarius",
+		sign: "sagittarius",
 		fortune: "Philosophical, Motion, Experimentation, Optimism",
 		image: "img/sagittarius.jpg"
 	},
 	{
-		sign: "Scorpio",
+		sign: "scorpio",
 		fortune: "Transient, Self-Willed, Purposeful, Unyielding",
 		image: "images/scorpio.jpg"
 	},
 	{
-		sign: "Taurus",
+		sign: "taurus",
 		fortune: "	Security, Subtle strength, Appreciation, Instruction, Patience",
 		image: "img/taurus.jpg"
 	},
 	{
-		sign: "Virgo",
+		sign: "virgo",
 		fortune: "Analyzing, Practical, Reflective, Observation, Thoughtful",
 		image: "img/virgo.jpg"
 	}
 ];
 // This is code so the enter key also fires (runs/invokes/instantiates) the function
-var btn = document.getElementById('userdata');
-btn.addEventListener('keypress', function enterKey(e) {
+var btn = document.getElementById("userInput");
+btn.addEventListener("keypress", function enterKey(e) {
 	if(e.keyCode == 13) {
 		horoscope();
 	};
@@ -72,7 +72,9 @@ btn.addEventListener('keypress', function enterKey(e) {
 // function to determine user horoscope, function fires on user clicking button line 24 index.html
 function horoscope() {
 	// store the tag with id="sign" in var userdata
-	var userdata = document.getElementById("userdata");
+	
+// originally had #userInput as id, but expert at meetup stated to change to #type and it worked!!
+	var userdata = document.getElementById("type");
 
 	// confirm the element exists and what value the user submits
 	console.log(userdata);
