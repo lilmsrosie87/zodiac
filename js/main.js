@@ -61,7 +61,7 @@ var zodiacMofo = [
 		image: "img/virgo.jpg"
 	}
 ];
-// This is code so the enter key also fires (runs/invokes/instantiates) the function
+// code so the enter key also runs the function
 var btn = document.getElementById("userInput");
 btn.addEventListener("keypress", function enterKey(e) {
 	if(e.keyCode == 13) {
@@ -69,9 +69,9 @@ btn.addEventListener("keypress", function enterKey(e) {
 	};
 }, false);
 
-// function to determine user horoscope, function fires on user clicking button line 24 index.html
+// function to determine user horoscope, function runs on user clicking button line 24 index.html
 function horoscope() {
-	// store the tag with id="sign" in var userdata
+
 	
 // originally had #userInput as id, but expert at meetup stated to change to #type and it worked!!
 	var userdata = document.getElementById("type");
@@ -113,7 +113,7 @@ function horoscope() {
 
 		// if no match is found, do opposite of above, mostly clearing content and images
 		document.getElementById("yourSign").textContent = "Not one of the signs. Try again!";
-		document.getElementById("yourHoroscope").textContent = "";
+		document.getElementById("yourHoroscope").textContent = " ";
 		document.getElementById("pic").src = "";
 	};
 };
