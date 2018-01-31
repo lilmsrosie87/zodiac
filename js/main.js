@@ -102,7 +102,7 @@ function horoscope() {
 			// get element with id="icon" and change source attribute to current zodiac image path
 			document.getElementById("pic").src = zodiacMofo[i].image;
 			// // get element with id="yourHoroscope" and change the content to this concatenated string
-			document.getElementById("yourHoroscope").textContent = "Your best attributes are: " + zodiac[i].fortune;
+			document.getElementById("yourHoroscope").textContent = "Your best attributes are: " + zodiacMofo[i].fortune;
 
 			// stop the function because we found a match and added the data to the screen!!!
 			return;

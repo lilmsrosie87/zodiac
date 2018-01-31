@@ -2,14 +2,10 @@
 	background-color: #00001a;
 }
 
-#bem-aqui {
-	margin: auto;
-	padding: 0px;
-}
-
 #heading {
-	margin: auto;
-	padding: 100px;
+	display: block;
+    margin-left: 100px;
+    margin-right: 50px;
 }
 
 
@@ -25,8 +21,10 @@
 }
 
 #astrology {
-	margin: auto;
-	padding: 70px;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
 #pic {
@@ -36,3 +34,12 @@
     width: 50%;
 }
 	
+#yourSign {
+	font-size: 34px;
+	text-align: center;
+}
+
+#yourHoroscope {
+	font-size: 50px;
+	text-align: center;
+}
