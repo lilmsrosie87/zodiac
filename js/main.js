@@ -74,6 +74,7 @@ function horoscope() {
 
 	
 // originally had #userInput as id, but expert at meetup stated to change to #type and it worked!!
+// userdata vs userInput
 	var userdata = document.getElementById("type");
 
 	// confirm the element exists and what value the user submits
